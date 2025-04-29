@@ -9,9 +9,9 @@ int main () {
     int dia, mes, ano;
     int doomsday, r;
     
-    int win =0;
+    int win = 0;
     int lose = 0; 
-    float ratio;
+    float ratio; // razão acertos/tentativas
     
     srand(time(NULL));
     
@@ -34,7 +34,7 @@ int main () {
             lose++;
         }
         
-        ano = (rand() % 2600) + 1400;
+        ano = (rand() % 2418) + 1582;
         mes = (rand() % 12) + 1;
         dia = diaAleat(mes, ano);
         

@@ -17,35 +17,19 @@ int leap (int ano) {
 }
 
 int diaAleat (int mes, int ano) {
-    int dia;
+    // vetor de dias por mes em um ano nao-bissexto
+    int diasMes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     
-    if (mes < 8) {
-            if (mes % 2 == 0) {
-                if (mes != 2) {
-                    dia = (rand() % 30) + 1;
-                } else {
-                    if (leap(ano)) {
-                        dia = (rand() % 29) + 1;
-                    } else {
-                        dia = (rand() % 28) + 1;    
-                    }
-                }
-            } else {
-                dia = (rand() % 31) + 1;       
-            }
-        } else {
-            if (mes % 2 == 0) {
-                dia = (rand() % 30) + 1;    
-            } else {
-                dia = (rand() % 31) + 1;       
-            }    
-        }
+    if (mes == 2 && leap(ano)) 
+        return rand() % 29 + 1;
         
-    return dia;    
+    return rand() % diasMes[mes - 1] + 1;    
 }
 
-int calcDoomsday (int d, int m, int a) {
+int calcDiaSemana (int d, int m, int a) {
     
+    // vetor de doomsdays 
+    // (estão em zero ou - para nao fazer mod com numero -)
     int doom[12] = {-4, 0, 0, -3, -5, -1, -3, -6, -2, -4, 0, -2};
     int doomsday;
     
@@ -56,6 +40,7 @@ int calcDoomsday (int d, int m, int a) {
         default:  doomsday = 3; 
     }
     
+    // doomsday do ano
     doomsday = doomsday + (a % 100) + ((a % 100) / 4);
     
     
