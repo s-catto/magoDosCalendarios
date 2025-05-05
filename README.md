@@ -9,5 +9,5 @@ Que Cronos esteja ao seu lado!
 </p>
 
 ### to do:
-- [ ] temporizador
+- [X] temporizador
 - [ ] log
