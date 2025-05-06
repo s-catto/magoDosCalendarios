@@ -41,6 +41,49 @@ int main () {
     int winAT, tentaAT;
     float somaTempoAT, minTempoAT, ratioAT;
     
+    int tut;
+    printf(" bora?\n");
+    printf("0 = bora\n1 = como usar\n");
+    
+    scanf("%d", &tut);
+    
+    if (tut) {
+        if (tut != 1) {
+            printf("eu falei ZERO OU UM seu bobalhão >:(\n");
+            printf("toma teu tutorial pq vc claramente não sabe \n");
+            printf("oq vc tá fazendo aqui\n\n");
+        }
+        
+        printf("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★\n");
+        
+        printf("\nSeja bem vindo, pequeno gafanhoto!\n\n");
+        printf("Uma data irá aparecer, calcule o dia da semana e responda.\n");
+        printf("Como ensinado no manual:\n\n");
+        printf("0 = DOM\n");
+        printf("1 = SEG 2 = TER\n");
+        printf("3 = QUA 4 = QUI\n");
+        printf("5 = SEX 6 = SAB\n\n");
+        
+        printf("-----------------------------------------------------------\n");
+        
+        printf("Ao aparecer \"next->\":\n");
+        printf("> pressione ENTER caso queira continuar\n");
+        printf("> ou pressione qualquer coisa e ENTER para finalizar.\n\n");
+        
+        printf("★★★★★★★★★★★★★★★★★★★★★★★ bom treino! ★★★★★★★★★★★★★★★★★★★★★★★\n");
+        
+        printf("\n agora bora?\n");
+        printf("0 = bora\n1 = não bora\n");
+        scanf("%d", &tut);
+        
+        if (tut) {
+            printf("então que se lasque >:(\n");
+            return 0;
+        }
+    }
+    
+    printf("\n");
+    
     char go = '\n';
     
     FILE* log = fopen("log", "r");
