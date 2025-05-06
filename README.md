@@ -10,4 +10,5 @@ Que Cronos esteja ao seu lado!
 
 ### to do:
 - [X] temporizador
-- [ ] log
+- [X] log
+- [ ] modo aprendiz
