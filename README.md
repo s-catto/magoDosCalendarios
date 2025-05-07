@@ -5,7 +5,7 @@ Olá, caro viajante, estaria interessado em aprender a magia dos calendários? A
 Que Cronos esteja ao seu lado!
 
 <p align = center>
-<img src="./img/mago.png">
+<img src="img/mago.png">
 </p>
 
 ### to do:
