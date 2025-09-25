@@ -26,26 +26,31 @@ int diaAleat (int mes, int ano) {
     return rand() % diasMes[mes - 1] + 1;    
 }
 
-int calcDiaSemana (int d, int m, int a) {
+Doomsdays* calcDiaSemana (int d, int m, int a) {
     
     // vetor de doomsdays 
     // (estão em zero ou - para nao fazer mod com numero -)
     int doom[12] = {-4, 0, 0, -3, -5, -1, -3, -6, -2, -4, 0, -2};
-    int doomsday;
+    Doomsdays* doomsdays = malloc(sizeof(Doomsdays));
     
     switch ((a / 100) % 4) {
-        case 0: doomsday = 2; break;
-        case 1: doomsday = 0; break;
-        case 2: doomsday = 5; break;
-        default:  doomsday = 3; 
+        case 0: doomsdays->sec = 2; break;
+        case 1: doomsdays->sec = 0; break;
+        case 2: doomsdays->sec = 5; break;
+        default:  doomsdays->sec = 3; 
     }
     
     // doomsday do ano
-    doomsday = doomsday + (a % 100) + ((a % 100) / 4);
+    doomsdays->ano = doomsdays->sec + (a % 100) + ((a % 100) / 4);
     
     
-    if ((m <= 2) && (leap(a))) 
-        return (doomsday + (d - doom[m-1]) + 1) % 7;   
+    if ((m <= 2) && (leap(a))) {
+        doomsdays->dia = (doomsdays->ano + (d - doom[m-1]) + 1) % 7;
+        doomsdays->ano = doomsdays->ano % 7;
+        return doomsdays;
+    }   
         
-    return (doomsday + (d - doom[m-1])) % 7;
+    doomsdays->dia = (doomsdays->ano + (d - doom[m-1])) % 7;
+    doomsdays->ano = doomsdays->ano % 7;
+    return doomsdays;
 }
