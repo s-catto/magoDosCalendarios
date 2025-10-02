@@ -236,13 +236,13 @@ void treino (int tut, int* tenta, int* win,
             
             }
             printf("\n\n");
-            win++;
+            (*win)++;
         
         // se a resposta está errada
         } else {
             printf("%d :(\n\n", doomsdays->dia); 
         }
-        tenta++;
+        (*tenta)++;
         
         printf("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★\n");
         
