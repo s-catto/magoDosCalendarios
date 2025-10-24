@@ -4,11 +4,6 @@
 Olá, caro viajante, estaria interessado em aprender a magia dos calendários? Aqui está a ferramenta para aperfeiçoar a sua habilidade. </br>
 Que Cronos esteja ao seu lado!
 
-<p align = center>
-<img src="./img/mago.png">
-</p>
-
-</br></br>   
 ## CASO ESCOLHA MODO MESTRE:  
 Uma data irá aparecer, calcule o dia da semana e responda. 
 <br><br>
@@ -34,6 +29,5 @@ Ao aparecer "next->":
 - pressione ENTER caso queira continuar  
 - ou pressione qualquer coisa e ENTER para finalizar.  
     
-<p align = center>
-★★★★★★★★★★★★★★★★★★★★★★★ bom treino! ★★★★★★★★★★★★★★★★★★★★★★★
-</p>
+---
+bom treino!
