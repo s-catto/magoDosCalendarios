@@ -4,6 +4,8 @@
 Olá, caro viajante, estaria interessado em aprender a magia dos calendários? Aqui está a ferramenta para aperfeiçoar a sua habilidade. </br>
 Que Cronos esteja ao seu lado!
 
+link manual do mago: https://www.inf.ufpr.br/sbc23/magia.html
+
 ## CASO ESCOLHA MODO MESTRE:  
 Uma data irá aparecer, calcule o dia da semana e responda. 
 <br><br>
