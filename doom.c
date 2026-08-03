@@ -40,8 +40,6 @@ Doomsdays* calcDiaSemana (int d, int m, int a) {
         default:  doomsdays->sec = 3; 
     }
     
-    printf("sec: %d\n", doomsdays->sec);
-    
     // doomsday do ano
     doomsdays->ano = doomsdays->sec + (a % 100) + ((a % 100) / 4);
     
@@ -49,14 +47,13 @@ Doomsdays* calcDiaSemana (int d, int m, int a) {
     if ((m <= 2) && (leap(a))) {
         doomsdays->dia = (doomsdays->ano + (d - doom[m-1]) - 1) % 7;
         doomsdays->ano = doomsdays->ano % 7;
-        printf("sec: %d, ano: %d, dia: %d \n", doomsdays->sec, doomsdays->ano, doomsdays->dia);
+        // printf("sec: %d, ano: %d, dia: %d \n", doomsdays->sec, doomsdays->ano, doomsdays->dia);
         return doomsdays;
     }   
         
     doomsdays->dia = (doomsdays->ano + (d - doom[m-1])) % 7;
     doomsdays->ano = doomsdays->ano % 7;
-    
-    printf("sec: %d, ano: %d, dia: %d \n", doomsdays->sec, doomsdays->ano, doomsdays->dia);    
+    // printf("sec: %d, ano: %d, dia: %d \n", doomsdays->sec, doomsdays->ano, doomsdays->dia);    
 
     return doomsdays;
 }
