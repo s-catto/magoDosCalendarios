@@ -74,7 +74,7 @@ void upPrintStats (int tenta, int* tentaAT, int win, int* winAT, float* ratioAT,
     *winAT += win;
     *somaTempoAT += somaTempo;
     
-    if (tenta > 0) {
+    if (tenta > 0 && *tentaAT > 0) {
         float ratio = ((float) win / tenta) * 100;
         *ratioAT = ((float) *winAT / *tentaAT) * 100;
         printf("===========================================================\n");
